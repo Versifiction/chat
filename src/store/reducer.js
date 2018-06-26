@@ -3,7 +3,7 @@
  */
 const initialState = {
   settings: {
-    active: true,
+    active: false,
   },
   messages: [
     {
