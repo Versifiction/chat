@@ -2,6 +2,9 @@
  * État initial pour le state de l'application
  */
 const initialState = {
+  settings: {
+    active: true,
+  },
   messages: [
     {
       username: 'jd',

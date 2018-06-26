@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Messages from '~/containers/Messages';
-import Settings from '~/components/Settings';
+import Settings from '~/containers/Settings';
 import Form from '~/components/Form';
 import './app.styl';
 
