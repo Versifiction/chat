@@ -15,9 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   const targetNode = document.getElementById('root');
   render(rootComponent, targetNode);
+  store.dispatch({
+    type: 'SOCKET_CONNECT',
+  });
 });
 
-// const socket = io();
+// const socket = io(); // on se connecte au serveur Socket.IO
 
 // console.log('WebSocket', socket);
 // console.log('---');
