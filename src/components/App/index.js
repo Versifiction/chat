@@ -1,9 +1,17 @@
 import React from 'react';
 
+import Messages from '~/components/Messages';
+import Settings from '~/components/Settings';
+import Form from '~/components/Form';
 import './app.styl';
 
 const App = () => (
-  <div className="app">Ici, une chatroom… EPAF le chien :D</div>
+  <div className="app">
+    <h1>Chatroom</h1>
+    <Messages />
+    <Settings />
+    <Form />
+  </div>
 );
 
 export default App;
