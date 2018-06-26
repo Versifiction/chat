@@ -3,7 +3,8 @@
  */
 const initialState = {
   settings: {
-    active: false,
+    active: true,
+    username: '',
   },
   messages: [
     {
@@ -35,6 +36,14 @@ const reducer = (currentState = initialState, action = {}) => {
         settings: {
           ...currentState.settings,
           active: !currentState.settings.active,
+        },
+      };
+    case 'TRACK_USERNAME':
+      return {
+        ...currentState,
+        settings: {
+          ...currentState.settings,
+          username: action.username,
         },
       };
     default: return currentState;

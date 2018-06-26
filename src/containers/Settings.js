@@ -4,12 +4,22 @@ import Settings from '~/components/Settings';
 
 const mapStateToProps = (state, ownProps) => ({
   active: state.settings.active,
+  username: state.settings.username,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   toggle: () => {
     dispatch({
       type: 'TOGGLE_SETTINGS',
+    });
+  },
+  trackUsername: (evt) => {
+    // 1. on lit une valeur dans le DOM du navigateur
+    const { value: username } = evt.target;
+    // 2. On communique cette valeur au reducer, pour traitement
+    dispatch({
+      type: 'TRACK_USERNAME',
+      username,
     });
   },
 });
