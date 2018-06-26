@@ -1,8 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './form.styl';
+
 const Form = () => (
-  <div className="app-form">formulaire</div>
+  <form className="app-form">
+    <input
+      type="text"
+      className="app-form-input"
+      placeholder="Votre message"
+    />
+  </form>
 );
 Form.propTypes = {};
 
