@@ -5,8 +5,19 @@ const socketMW = store => next => (action) => {
   switch (action.type) {
     case 'SOCKET_CONNECT': {
       socket = io('http://localhost:3000'); // on se connecte au serveur Socket.IO
-      console.log('WebSocket', socket);
-      console.log('---');
+      window.socket = socket;
+
+      const displayMessage = (message) => {
+        // Tiens, un message… et si on le stockait dans le state Redux ?
+        store.dispatch({
+          type: 'MESSAGE_RECEIVED',
+          message,
+        });
+      };
+
+      // similaire dans l'idée à un window.addEventListener('click', handleClick);
+      socket.on('chat message', displayMessage);
+
       break;
     }
     default: next(action);

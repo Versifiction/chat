@@ -56,6 +56,11 @@ const reducer = (currentState = initialState, action = {}) => {
           // usernameInput: '',
         },
       };
+    case 'MESSAGE_RECEIVED':
+      return {
+        ...currentState,
+        messages: [...currentState.messages, action.message],
+      };
     default: return currentState;
   }
 };
