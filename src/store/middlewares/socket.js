@@ -20,6 +20,15 @@ const socketMW = store => next => (action) => {
 
       break;
     }
+    case 'SEND_MESSAGE': {
+      const globalState = store.getState();
+      const { username } = globalState.settings;
+      const { messageInput: content } = globalState;
+      socket.emit('chat message', {
+        username,
+        content,
+      });
+    }
     default: next(action);
   }
 };

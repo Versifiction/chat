@@ -2,7 +2,7 @@ import React from 'react';
 
 import Messages from '~/containers/Messages';
 import Settings from '~/containers/Settings';
-import Form from '~/components/Form';
+import Form from '~/containers/Form';
 import './app.styl';
 
 const App = () => (

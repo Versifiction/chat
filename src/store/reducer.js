@@ -7,22 +7,20 @@ const initialState = {
     usernameInput: '', // input contrôlé pour track la valeur du pseudo qui change
     username: 'Anonymous',
   },
+  messageInput: '',
   messages: [
-    {
-      username: 'jd',
-      content: 'Ça va ?',
-      own: true,
-    },
-    {
-      username: 'Yo',
-      content: 'Oui et toi ?',
-      own: false,
-    },
-    {
-      username: 'jd',
-      content: 'Il fait chaud :D',
-      own: true,
-    },
+    // {
+    //   username: 'jd',
+    //   content: 'Ça va ?',
+    // },
+    // {
+    //   username: 'Yo',
+    //   content: 'Oui et toi ?',
+    // },
+    // {
+    //   username: 'jd',
+    //   content: 'Il fait chaud :D',
+    // },
   ],
 };
 
@@ -55,6 +53,16 @@ const reducer = (currentState = initialState, action = {}) => {
           username: currentState.settings.usernameInput,
           // usernameInput: '',
         },
+      };
+    case 'TRACK_MESSAGE':
+      return {
+        ...currentState,
+        messageInput: action.value,
+      };
+    case 'SEND_MESSAGE':
+      return {
+        ...currentState,
+        messageInput: '',
       };
     case 'MESSAGE_RECEIVED':
       return {
