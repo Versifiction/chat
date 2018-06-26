@@ -22,6 +22,12 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
       username,
     });
   },
+  saveUsername: (evt) => {
+    evt.preventDefault();
+    dispatch({
+      type: 'SAVE_USERNAME',
+    });
+  },
 });
 
 const SettingsContainer = connect(

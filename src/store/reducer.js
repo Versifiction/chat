@@ -5,6 +5,7 @@ const initialState = {
   settings: {
     active: true,
     usernameInput: '', // input contrôlé pour track la valeur du pseudo qui change
+    username: 'Anonymous',
   },
   messages: [
     {
@@ -44,6 +45,15 @@ const reducer = (currentState = initialState, action = {}) => {
         settings: {
           ...currentState.settings,
           usernameInput: action.username,
+        },
+      };
+    case 'SAVE_USERNAME':
+      return {
+        ...currentState,
+        settings: {
+          ...currentState.settings,
+          username: currentState.settings.usernameInput,
+          // usernameInput: '',
         },
       };
     default: return currentState;

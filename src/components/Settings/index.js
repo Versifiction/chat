@@ -9,6 +9,7 @@ const Settings = ({
   usernameInput: usernameValue,
   toggle,
   trackUsername,
+  saveUsername,
 }) => {
   const currentClassName = classNames(
     'app-settings',
@@ -23,7 +24,10 @@ const Settings = ({
         className="app-settings-toggle"
         onClick={toggle}
       />
-      <div className="app-settings-form">
+      <form
+        className="app-settings-form"
+        onSubmit={saveUsername}
+      >
         <input
           type="text"
           className="app-settings-input"
@@ -32,7 +36,7 @@ const Settings = ({
           onChange={trackUsername}
         />
         <button className="app-settings-button">OK</button>
-      </div>
+      </form>
     </div>
   );
 };
@@ -42,6 +46,7 @@ Settings.propTypes = {
   usernameInput: PropTypes.string.isRequired,
   toggle: PropTypes.func.isRequired,
   trackUsername: PropTypes.func.isRequired,
+  saveUsername: PropTypes.func.isRequired,
 };
 
 export default Settings;
