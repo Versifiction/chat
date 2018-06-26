@@ -6,7 +6,7 @@ import './settings.styl';
 
 const Settings = ({
   active: open,
-  username,
+  usernameInput: usernameValue,
   toggle,
   trackUsername,
 }) => {
@@ -28,7 +28,7 @@ const Settings = ({
           type="text"
           className="app-settings-input"
           placeholder="Votre pseudo"
-          value={username}
+          value={usernameValue}
           onChange={trackUsername}
         />
         <button className="app-settings-button">OK</button>
@@ -39,7 +39,7 @@ const Settings = ({
 
 Settings.propTypes = {
   active: PropTypes.bool.isRequired,
-  username: PropTypes.string.isRequired,
+  usernameInput: PropTypes.string.isRequired,
   toggle: PropTypes.func.isRequired,
   trackUsername: PropTypes.func.isRequired,
 };

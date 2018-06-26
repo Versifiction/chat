@@ -4,7 +4,7 @@
 const initialState = {
   settings: {
     active: true,
-    username: '',
+    usernameInput: '', // input contrôlé pour track la valeur du pseudo qui change
   },
   messages: [
     {
@@ -43,7 +43,7 @@ const reducer = (currentState = initialState, action = {}) => {
         ...currentState,
         settings: {
           ...currentState.settings,
-          username: action.username,
+          usernameInput: action.username,
         },
       };
     default: return currentState;

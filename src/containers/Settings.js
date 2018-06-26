@@ -4,7 +4,7 @@ import Settings from '~/components/Settings';
 
 const mapStateToProps = (state, ownProps) => ({
   active: state.settings.active,
-  username: state.settings.username,
+  usernameInput: state.settings.usernameInput,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
