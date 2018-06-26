@@ -6,9 +6,17 @@ const mapStateToProps = (state, ownProps) => ({
   active: state.settings.active,
 });
 
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  toggle: () => {
+    dispatch({
+      type: 'TOGGLE_SETTINGS',
+    });
+  },
+});
+
 const SettingsContainer = connect(
   mapStateToProps, // lecture depuis le state
-  null, // écriture dans le state (rien à faire dans ce cas)
+  mapDispatchToProps, // écriture dans le state (rien à faire dans ce cas)
 )(Settings);
 
 export default SettingsContainer;

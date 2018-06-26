@@ -29,6 +29,14 @@ const initialState = {
  */
 const reducer = (currentState = initialState, action = {}) => {
   switch (action.type) {
+    case 'TOGGLE_SETTINGS':
+      return {
+        ...currentState,
+        settings: {
+          ...currentState.settings,
+          active: !currentState.settings.active,
+        },
+      };
     default: return currentState;
   }
 };

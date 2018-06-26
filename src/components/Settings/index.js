@@ -6,6 +6,7 @@ import './settings.styl';
 
 const Settings = ({
   active: open,
+  toggle,
 }) => {
   const currentClassName = classNames(
     'app-settings',
@@ -15,7 +16,10 @@ const Settings = ({
   );
   return (
     <div className={currentClassName}>
-      <div className="app-settings-toggle" />
+      <div
+        className="app-settings-toggle"
+        onClick={toggle}
+      />
       <div className="app-settings-form">
         <input
           type="text"
@@ -30,6 +34,7 @@ const Settings = ({
 
 Settings.propTypes = {
   active: PropTypes.bool.isRequired,
+  toggle: PropTypes.func.isRequired,
 };
 
 export default Settings;
