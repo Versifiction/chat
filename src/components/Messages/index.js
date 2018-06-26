@@ -4,12 +4,22 @@ import PropTypes from 'prop-types';
 import Message from '~/components/Message';
 import './messages.styl';
 
-const Messages = () => (
+const Messages = ({
+  messages,
+}) => (
   <div className="app-messages">
-    <Message username="jd" content="Salut, ça va ?" own />
-    <Message username="Yo" content="Oui et toi ?" />
+    {
+      messages.map(message => (
+        <Message key={message.content} {...message} />
+      ))
+    }
   </div>
 );
-Messages.propTypes = {};
+
+Messages.propTypes = {
+  messages: PropTypes.arrayOf(PropTypes.shape({
+    content: PropTypes.string.isRequired,
+  })).isRequired,
+};
 
 export default Messages;

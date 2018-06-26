@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Messages from '~/components/Messages';
+import Messages from '~/containers/Messages';
 import Settings from '~/components/Settings';
 import Form from '~/components/Form';
 import './app.styl';
