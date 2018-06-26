@@ -1,3 +1,4 @@
+import io from 'socket.io-client';
 import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   render(rootComponent, targetNode);
 });
 
-// const socket = window.io();
+// const socket = io();
 
 // console.log('WebSocket', socket);
 // console.log('---');
