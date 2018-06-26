@@ -10,7 +10,7 @@ const Messages = ({
   <div className="app-messages">
     {
       messages.map(message => (
-        <Message key={message.content} {...message} />
+        <Message key={message.id} {...message} />
       ))
     }
   </div>
