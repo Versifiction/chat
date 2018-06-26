@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Message = ({
-  username,
-  content,
-  own,
+  username, // source ownProps
+  content, // source ownProps
+  own, // source container
 }) => {
   const currentClassName = classNames(
     'app-message',
