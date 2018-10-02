@@ -5,7 +5,7 @@ const initialState = {
   settings: {
     active: true,
     usernameInput: '', // input contrôlé pour track la valeur du pseudo qui change
-    username: 'Anonymous',
+    username: 'Anonyme',
   },
   messageInput: '',
   messages: [

@@ -13,10 +13,15 @@ const Message = ({
       'app-message--own': own,
     },
   );
+
   return (
-    <div className={currentClassName}>
-      <div className="app-message-user">{username}</div>
-      <div className="app-message-content">{content}</div>
+    <div>
+      <div className={currentClassName}>
+        <div className="app-message-user">{username}</div>
+        <div className="app-message-time"></div>
+        <div className="app-message-content">{content}</div>
+      </div>
+      <hr />
     </div>
   );
 };

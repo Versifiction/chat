@@ -31,7 +31,7 @@ const Settings = ({
         <input
           type="text"
           className="app-settings-input"
-          placeholder="Votre pseudo"
+          placeholder="Entrez votre pseudo"
           value={usernameValue}
           onChange={trackUsername}
         />

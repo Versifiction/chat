@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Point de départ des projets React",
   "main": "index.js",
-  "repository": "git@github.com:O-clock-Hyperspace/React-modele.git",
+  "repository": "git@github.com:Versifiction/chat.git",
   "author": "Jean-Denis Vauguet <jd@vauguet.fr>",
   "license": "MIT",
   "private": false,
@@ -29,7 +29,11 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
+    "concurrently": "^4.0.1",
     "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "jsdom": "^12.1.0",
+    "moment": "^2.22.2",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
@@ -39,8 +43,7 @@
     "socket.io-client": "^2.1.1"
   },
   "scripts": {
-    "start": "parcel src/index.html",
-    "start:server": "node server/index.js",
+    "start": "concurrently \"parcel src/index.html\" \"node server/index.js\"",
     "clean": "rm -rf .cache dist",
     "watch": "yarn clean && yarn start"
   }

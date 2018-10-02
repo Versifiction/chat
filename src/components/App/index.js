@@ -7,7 +7,7 @@ import './app.styl';
 
 const App = () => (
   <div className="app">
-    <h1 className="app-title">Chatroom</h1>
+    <h1 className="app-title">Versifiction's Chatroom</h1>
     <Messages />
     <Settings />
     <Form />

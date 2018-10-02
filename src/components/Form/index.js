@@ -18,7 +18,7 @@ const Form = ({
     <input
       type="text"
       className="app-form-input"
-      placeholder="Votre message"
+      placeholder="Entrez votre message"
       value={messageValue}
       onChange={trackMessage}
     />

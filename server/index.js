@@ -6,7 +6,6 @@ var join = require('path').join;
 var Server = require('http').Server;
 var socket = require('socket.io');
 
-
 /*
  * Vars
  */
@@ -29,7 +28,6 @@ app.get('/', function(req, res) {
   res.sendFile(indexPath);
 });
 
-
 /*
  * Socket.io
  */
@@ -38,6 +36,12 @@ io.on('connection', function(socket) {
   socket.on('chat message', function(message) {
     message.id = ++id;
     io.emit('chat message', message);
+  });
+});
+
+io.on('connection', function(socket) {
+  socket.on('service-message', function(message) {
+    message.id = ++id;
   });
 });
 
